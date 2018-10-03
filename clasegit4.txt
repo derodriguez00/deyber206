@@ -1,0 +1,156 @@
+estudiante@T1-406-15:~$ cd /~
+bash: cd: /~: No existe el archivo o el directorio
+estudiante@T1-406-15:~$ cd deyber206/
+estudiante@T1-406-15:~/deyber206$ push origin master
+El programa «push» no está instalado. Puede instalarlo escribiendo:
+sudo apt install heimdal-clients
+estudiante@T1-406-15:~/deyber206$ git push origin master
+Username for 'https://github.com': derodriguez00
+Password for 'https://derodriguez00@github.com': 
+To https://github.com/derodriguez00/deyber206.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/derodriguez00/deyber206.git'
+consejo: Updates were rejected because the remote contains work that you do
+consejo: not have locally. This is usually caused by another repository pushing
+consejo: to the same ref. You may want to first integrate the remote changes
+consejo: (e.g., 'git pull ...') before pushing again.
+consejo: See the 'Note about fast-forwards' in 'git push --help' for details.
+estudiante@T1-406-15:~/deyber206$ pull
+No se ha encontrado la orden «pull», quizás quiso decir:
+ La orden «publ» del paquete «atfs» (universe)
+pull: no se encontró la orden
+estudiante@T1-406-15:~/deyber206$ git pull
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+De https://github.com/derodriguez00/deyber206
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+estudiante@T1-406-15:~/deyber206$ git remote -v
+origin	https://github.com/derodriguez00/deyber206.git (fetch)
+origin	https://github.com/derodriguez00/deyber206.git (push)
+estudiante@T1-406-15:~/deyber206$ git pull origin master
+De https://github.com/derodriguez00/deyber206
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+estudiante@T1-406-15:~/deyber206$ git push origin master
+Username for 'https://github.com': derodriguez00
+Password for 'https://derodriguez00@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/derodriguez00/deyber206.git/'
+estudiante@T1-406-15:~/deyber206$ git push origin master
+Username for 'https://github.com': derodriguez00
+Password for 'https://derodriguez00@github.com': 
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (8/8), 835 bytes | 0 bytes/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/derodriguez00/deyber206.git
+   3b91e53..32b9b0d  master -> master
+estudiante@T1-406-15:~/deyber206$ touch styles.css
+estudiante@T1-406-15:~/deyber206$ nano styles.css
+estudiante@T1-406-15:~/deyber206$ git status
+En la rama master
+Archivos sin seguimiento:
+  (use «git add <archivo>...» para incluir en lo que se ha de confirmar)
+
+	styles.css
+
+no se ha agregado nada al commit pero existen archivos sin seguimiento (use «git add» para darle seguimiento)
+estudiante@T1-406-15:~/deyber206$ git commit -am "Archivo css basico de prueba"
+En la rama master
+Archivos sin seguimiento:
+	styles.css
+
+no se ha agregado nada al commit pero existen archivos sin seguimiento
+estudiante@T1-406-15:~/deyber206$ git add styles.css
+estudiante@T1-406-15:~/deyber206$ git status
+En la rama master
+Cambios para hacer commit:
+  (use «git reset HEAD <archivo>...» para sacar del stage)
+
+	nuevo archivo: styles.css
+
+estudiante@T1-406-15:~/deyber206$ git commit -am "Archivo css basico de prueba"
+[master 4abc84e] Archivo css basico de prueba
+ 1 file changed, 1 insertion(+)
+ create mode 100644 styles.css
+estudiante@T1-406-15:~/deyber206$ git push origin master
+Username for 'https://github.com': derodriguez00
+Password for 'https://derodriguez00@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 369 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/derodriguez00/deyber206.git
+   32b9b0d..4abc84e  master -> master
+estudiante@T1-406-15:~/deyber206$ git status
+En la rama master
+Cambios no preparados para el commit:
+  (use «git add <archivo>...» para actualizar lo que se confirmará)
+  (use «git checkout -- <archivo>...» para descartar cambios en el directorio de trabajo)
+
+	modificado:    styles.css
+
+no hay cambios agregados al commit (use «git add» o «git commit -a»)
+estudiante@T1-406-15:~/deyber206$ git commit -am "Archivo css con estilo para el h1"
+[master 3fe7af4] Archivo css con estilo para el h1
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+estudiante@T1-406-15:~/deyber206$ git push origin master
+Username for 'https://github.com': derodriguez00
+Password for 'https://derodriguez00@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/derodriguez00/deyber206.git
+   4abc84e..3fe7af4  master -> master
+estudiante@T1-406-15:~/deyber206$ git status
+En la rama master
+Cambios no preparados para el commit:
+  (use «git add <archivo>...» para actualizar lo que se confirmará)
+  (use «git checkout -- <archivo>...» para descartar cambios en el directorio de trabajo)
+
+	modificado:    index.html
+
+no hay cambios agregados al commit (use «git add» o «git commit -a»)
+estudiante@T1-406-15:~/deyber206$ git commit -am "Se ajusto el html para agregar los estilos desde el .css"
+[master 92b91bc] Se ajusto el html para agregar los estilos desde el .css
+ 1 file changed, 17 insertions(+), 3 deletions(-)
+ rewrite index.html (100%)
+estudiante@T1-406-15:~/deyber206$ git push origin master
+Username for 'https://github.com': derodriguez00
+Password for 'https://derodriguez00@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 634 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/derodriguez00/deyber206.git
+   3fe7af4..92b91bc  master -> master
+estudiante@T1-406-15:~/deyber206$ 
+
+aqui eran las 10:43 am
+_________________________________________________________
+
+iniciamos las 10:44 am
