@@ -9,14 +9,25 @@
 #         puts "No se cumplio ninguna condición"
 #     end
 
-#!/usr/bin/env ruby
-puts 'Ingrese el texto Jose o Maria.'
-name = gets.chomp.to_s.upcase
-case name
-when "JOSE"
-    puts "#{name} es padre de Jesus"
-when "MARIA"
-    puts "#{name} es la madre de Jesus"
-else
-    puts "No se cumplio ninguna condición"
+# #!/usr/bin/env ruby
+# puts 'Ingrese el texto Jose o Maria.'
+# name = gets.chomp.to_s.upcase
+# case name
+# when "JOSE"
+#     puts "#{name} es padre de Jesus"
+# when "MARIA"
+#     puts "#{name} es la madre de Jesus"
+# else
+#     puts "No se cumplio ninguna condición"
+# end
+
+def unmetodo
+    puts 'Comienzo del metodo'
+    yield
+    yield
+    puts 'Final del metodo'
+end
+
+unmetodo do
+    puts ' Soy bloque que esta fuera, pero me imprimo dentro del metodo'
 end
