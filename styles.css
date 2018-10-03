@@ -2,5 +2,5 @@ h1{
     text-transform: lowercase;
     color: blue;
     text-align: center;
-    
+    text-anchor: middle;
 }
